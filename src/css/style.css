@@ -1,0 +1,103 @@
+.container {
+  background-color: hsl(257, 40%, 49%);
+  height: 100vh;
+  background-image: url(../images/bg-desktop.svg);
+  background-size: cover;
+  display: grid;
+  grid:
+    "header header" 1fr "main main" 2fr "footer footer" 1fr;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  padding: 50px;
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    "img text-content";
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img {
+  grid-area: img;
+  padding-left: 50px;
+}
+
+.img img {
+  max-width: 100%;
+}
+
+
+.text-content {
+  grid-area: text-content;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 70px 50px 50px;
+
+}
+
+.text-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.text-content p {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+
+.text-content a {
+
+  color: hsl(257, 40%, 49%);
+  text-align: center;
+  background-color: #fff;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 12px 60px;
+  max-width: fit-content;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+.text-content a:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-right: 80px;
+  padding-bottom: 50px;
+}
+
+.footer .social a {
+  color: #fff;
+  margin: 5px;
+  padding: 10px;
+  font-size: 20px;
+  border: solid 2px #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.footer .social a:hover {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
+}
